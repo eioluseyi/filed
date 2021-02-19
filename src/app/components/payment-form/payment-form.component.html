@@ -1,0 +1,12 @@
+<div>
+    <form [formGroup]="creditCardDetails" (ngSubmit)="onSubmit()">
+        <input type="text" formControlName="ccNumber" placeholder="Card number" required>
+        <input type="text" formControlName="cardHolder" placeholder="Card holder" required>
+        <input type="date" formControlName="expirationDate" placeholder="Exp. date" required>
+        <input type="text" formControlName="ccv" placeholder="ccv">
+        <input type="text" formControlName="amount" placeholder="Amount" required>
+
+        <button type="submit" [disabled]="!creditCardDetails.valid">Submit</button>
+    </form>
+</div>
+<!-- https://angular.io/guide/reactive-forms -->
