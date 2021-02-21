@@ -1,11 +1,17 @@
 <div class="container">
     <form [formGroup]="creditCardDetails" (ngSubmit)="onSubmit()">
         <div class="form-group">
+            <br><br>
             <input type="text" class="form-control" formControlName="ccNumber" placeholder="Card number" required>
+            <br>
             <input type="text" class="form-control" formControlName="cardHolder" placeholder="Card holder" required>
+            <br>
             <input type="month" class="form-control" formControlName="expirationDate" placeholder="Exp. date" required>
+            <br>
             <input type="text" class="form-control" formControlName="ccv" placeholder="ccv">
+            <br>
             <input type="text" class="form-control" formControlName="amount" placeholder="Amount" required>
+            <br>
             <button type="submit" class="form-control" [disabled]="!creditCardDetails.valid">Submit</button>
         </div>
     </form>
