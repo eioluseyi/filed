@@ -32,7 +32,7 @@ export class PaymentFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.warn(this.creditCardDetails.value);
+    // console.warn(this.creditCardDetails.value);
     this.submitCardDetailsChange.emit(this.creditCardDetails.value);
   }
 }

@@ -14,7 +14,7 @@ export class PaymentService {
     private http: HttpClient,
   ) {}
 
-  private paymentUrl: string = '/';
+  private paymentUrl: string = 'https://jsonplaceholder.typicode.com/posts';
 
   pay(data: CreditCardPaymentDetails) {
     // makes a POST request to some endpoint

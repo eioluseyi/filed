@@ -13,6 +13,9 @@ import { PaymentFormComponent } from './components/payment-form/payment-form.com
 import { PaymentService } from './services/payment.service';
 import { StoreModule } from '@ngrx/store';
 import { cardReducer } from './store/card/card.reducer';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -26,8 +29,9 @@ import { cardReducer } from './store/card/card.reducer';
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({ cards: cardReducer }, {}),
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({ cards: cardReducer }, {}),    
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [
     PaymentService

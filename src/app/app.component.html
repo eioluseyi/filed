@@ -1,5 +1,5 @@
 <div>
   <router-outlet></router-outlet>
   <!-- somewhere here.. -->
-  <div>{{ cardDetails$ | async }}</div>
+  <div class="store-output"><code>Store data: {{ cardDetails$ | async | json }}</code></div>
 </div>
